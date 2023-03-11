@@ -1,5 +1,11 @@
-// Define an Array to be reversed
-const originalArray = [1, 2, 3, 4, 5];
+const prompt = require('prompt-sync')();
+const originalArray = [];
+const length = prompt('Enter the length of the array: ');
+
+for (let i = 0; i < length; i++) {
+    const element = prompt('Enter Element: ');
+    originalArray.push(element);
+}
 
 function reverseArray(array) {
     const reversedArray = [];
@@ -10,7 +16,7 @@ function reverseArray(array) {
     return reversedArray;
 }
 
-const reversedArray = reverseArray(originalArray);           
+const reversedArray = reverseArray(originalArray);
 
-console.log("Original Array: " , originalArray);
-console.log("Reversed Array: " , reversedArray);
+console.log("Original Array: " + originalArray);
+console.log("Reversed Array: " + reversedArray);
